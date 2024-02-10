@@ -77,7 +77,8 @@ reset.addEventListener("click", () => {
 })
 
 submit.addEventListener("click", () => {
-    calculation = eval(calculation);
+    calculation = String(eval(calculation));
+    if(calculation.includes(".")) usedComa = true;
     displayCalculation(calculation);
 })
 

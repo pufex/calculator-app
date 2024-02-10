@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+
+  <div class="calculator-container">
+    <div class="title-section">
+      <h1>calc</h1>
+      <div class="theme">
+        <label class="theme-label" for="">Theme</label>
+        <div class="settings">
+          <div class="settings-labels">
+            <label for="" class="setting">1</label>
+            <label for="" class="setting">2</label>
+            <label for="" class="setting">3</label>
+          </div>
+          <input class="theme-slider" type="range" value="0" max="2" min="0">
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <span id="result">123</span>
+    </div>
+    <div class="buttons-container">
+      <button class="short number">7</button>
+      <button class="short number">8</button>
+      <button class="short number">9</button>
+      <button class="short function del">DEL</button>
+      <button class="short number">4</button>
+      <button class="short number">5</button>
+      <button class="short number">6</button>
+      <button class="short function">+</button>
+      <button class="short number">1</button>
+      <button class="short number">2</button>
+      <button class="short number">3</button>
+      <button class="short function">-</button>
+      <button class="short function">.</button>
+      <button class="short number">0</button>
+      <button class="short function">/</button>
+      <button class="short function">x</button>
+
+      <button class="wide function reset">Reset</button>
+      <button class="wide function submit">=</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

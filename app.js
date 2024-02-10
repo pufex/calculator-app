@@ -72,7 +72,7 @@ del.addEventListener("click", () => {
 reset.addEventListener("click", () => {
     calculation = ""
     isFunction = true;
-    usedComa = true;
+    usedComa = false;
     displayCalculation(calculation);
 })
 

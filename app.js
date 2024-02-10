@@ -19,12 +19,13 @@ theme.addEventListener('change', () => {
     document.documentElement.style.setProperty('--text', themes[themes[theme.value][9]]);
 })
 
-let calculation = "", isFunction = true;
+let calculation = "", isFunction = true, usedComa = false;
 const numbers = document.querySelectorAll(".number");
 const functions = document.querySelectorAll(".function");
-console.log(functions);
+const del = document.querySelector(".del");
 const reset = document.querySelector(".reset");
 const submit = document.querySelector(".submit");
+const coma = document.querySelector(".coma");
 
 const displayCalculation = (currentCalculation) => {
     const result = document.querySelector("#result");
@@ -33,19 +34,15 @@ const displayCalculation = (currentCalculation) => {
 
 numbers.forEach((number) => {
     number.addEventListener("click", () => {
-        console.log(number.innerText);
         calculation += number.innerText;
         isFunction = false;
-        console.log(isFunction);
         displayCalculation(calculation);
     })
 })
 
 functions.forEach((item) => {
     item.addEventListener("click", () => {
-        if(isFunction == true) return;
-        console.log("yes");
-        console.log(item.innerText);
+        if(isFunction == true || usedComa == true) return;
         switch (item.innerText){
             case "+": calculation += "+"; break; 
             case "-": calculation += "-"; break; 
@@ -54,14 +51,28 @@ functions.forEach((item) => {
             default: return;
         }
         isFunction = true;
+        usedComa = false;
         displayCalculation(calculation);
     })
+})
+
+coma.addEventListener("click", () => {
+    if(isFunction == true || usedComa == true) return;
+    calculation += ".";
+    displayCalculation(calculation);
+    usedComa = true;
+})
+
+del.addEventListener("click", () => {
+    calculation = calculation.slice(0, calculation.length - 1);
+    displayCalculation(calculation);
 })
 
 
 reset.addEventListener("click", () => {
     calculation = ""
     lastAction = "number";
+    usedComa = true;
     displayCalculation(calculation);
 })
 

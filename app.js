@@ -71,7 +71,7 @@ del.addEventListener("click", () => {
 
 reset.addEventListener("click", () => {
     calculation = ""
-    lastAction = "number";
+    isFunction = true;
     usedComa = true;
     displayCalculation(calculation);
 })

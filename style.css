@@ -213,3 +213,9 @@ footer a::after{
     font-size: 1.5rem;
     color: yellow;
 }
+
+@media (max-width: 450px){
+    .short, .wide{
+        font-size: 1.5rem;
+    }
+}

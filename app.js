@@ -16,7 +16,7 @@ theme.addEventListener('change', () => {
     document.documentElement.style.setProperty('--key-shadow-2', themes[theme.value][6]);
     document.documentElement.style.setProperty('--key-background-3', themes[theme.value][7]);
     document.documentElement.style.setProperty('--key-shadow-3', themes[theme.value][8]);
-    document.documentElement.style.setProperty('--text', themes[themes[theme.value][9]]);
+    document.documentElement.style.setProperty('--text', themes[theme.value][9]);
 })
 
 let calculation = "", isFunction = true, usedComa = false;

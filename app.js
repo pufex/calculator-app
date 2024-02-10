@@ -79,6 +79,5 @@ reset.addEventListener("click", () => {
 submit.addEventListener("click", () => {
     calculation = eval(calculation);
     displayCalculation(calculation);
-    calculation = "";
 })
 

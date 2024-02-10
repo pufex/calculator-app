@@ -127,11 +127,41 @@ body{
     padding: 2rem;
     border-radius: 15px;
     background-color: var(--screen-background);
+
 }
+
+/* #result::-webkit-scrollbar-{
+     appearance: none;
+    -webkit-appearance: none;
+} */
 
 #result{
     font-size: 2rem;
     color: var(--white);
+    overflow-x: scroll;
+    height: 100%;
+}
+
+#result::-webkit-scrollbar{
+    /* width: 0.25rem; */
+    height: 0.5rem;
+    cursor: pointer;
+}
+
+#result::-webkit-scrollbar-track{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--toggle-background);
+}
+
+#result::-webkit-scrollbar-thumb{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: var(--main-background);
 }
 
 .buttons-container{
@@ -219,3 +249,4 @@ footer a::after{
         font-size: 1.5rem;
     }
 }
+

@@ -42,7 +42,7 @@ numbers.forEach((number) => {
 
 functions.forEach((item) => {
     item.addEventListener("click", () => {
-        if(isFunction == true || usedComa == true) return;
+        if(isFunction == true || calculation[calculation.length - 1] == ".") return;
         switch (item.innerText){
             case "+": calculation += "+"; break; 
             case "-": calculation += "-"; break; 
